@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Trebuchet MS', 'Avenir Next', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #0f172a;
+  background-color: #fff7ed;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 12% 20%, rgba(255, 207, 157, 0.35), transparent 28%),
+    radial-gradient(circle at 85% 12%, rgba(130, 197, 255, 0.35), transparent 26%),
+    radial-gradient(circle at 50% 85%, rgba(244, 176, 203, 0.3), transparent 32%),
+    linear-gradient(180deg, rgba(255, 247, 237, 0.7), rgba(240, 247, 255, 0.7));
+  background-attachment: fixed;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(251, 191, 36, 0.35);
+}
