@@ -67,6 +67,13 @@ const App: React.FC = () => {
     }
   };
 
+  const handleRestart = () => {
+    handleReset();
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const baseLink =
     typeof window !== 'undefined'
       ? window.location.origin + window.location.pathname
@@ -160,16 +167,16 @@ const App: React.FC = () => {
             ))}
           </ol>
 
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <button
               onClick={handleSubmit}
-              className="rounded-full bg-amber-500 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 hover:shadow-xl"
+              className="w-full rounded-full bg-amber-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 hover:shadow-xl sm:w-auto"
             >
               Calculate my score
             </button>
             <button
               onClick={handleReset}
-              className="rounded-full border border-slate-300 bg-white px-5 py-2 text-sm font-semibold text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+              className="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:w-auto"
             >
               Clear checkboxes
             </button>
@@ -193,16 +200,22 @@ const App: React.FC = () => {
                   Share it or retake to try again.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                <button
+                  onClick={handleRestart}
+                  className="w-full rounded-full bg-amber-500 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 hover:shadow-xl sm:w-auto"
+                >
+                  Test again
+                </button>
                 <button
                   onClick={copyLink}
-                  className="rounded-full bg-slate-900 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:shadow-xl"
+                  className="w-full rounded-full bg-slate-900 px-4 py-3 text-sm font-medium text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:shadow-xl sm:w-auto"
                 >
                   Copy link
                 </button>
                 <a
                   href={smsHref}
-                  className="rounded-full bg-amber-500 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 hover:shadow-xl"
+                  className="w-full rounded-full bg-amber-500 px-4 py-3 text-sm font-medium text-white shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 hover:shadow-xl sm:w-auto"
                 >
                   Share via text
                 </a>
@@ -210,7 +223,7 @@ const App: React.FC = () => {
                   href={xHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full bg-sky-600 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-sky-600/20 transition hover:-translate-y-0.5 hover:shadow-xl"
+                  className="w-full rounded-full bg-sky-600 px-4 py-3 text-sm font-medium text-white shadow-lg shadow-sky-600/20 transition hover:-translate-y-0.5 hover:shadow-xl sm:w-auto"
                 >
                   Share on X
                 </a>
