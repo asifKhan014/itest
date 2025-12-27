@@ -143,18 +143,18 @@ const App: React.FC = () => {
                 key={question.id}
                 className="rounded-2xl border border-slate-100 bg-white/70 p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-within:ring-2 focus-within:ring-amber-400"
               >
-                <label className="flex cursor-pointer gap-3">
+                <label className="flex cursor-pointer items-start gap-3">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-900 text-xs font-semibold text-white">
+                    {question.id}
+                  </span>
                   <input
                     type="checkbox"
-                    className="mt-1 h-5 w-5 cursor-pointer accent-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                    className="mt-1 h-5 w-5 shrink-0 cursor-pointer accent-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-400"
                     checked={Boolean(answers[question.id])}
                     onChange={() => handleToggle(question)}
                     disabled={question.disabled}
                   />
                   <span className="text-sm leading-relaxed text-slate-800">
-                    <span className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-xs font-semibold text-white">
-                      {question.id}
-                    </span>
                     {question.text}
                     {question.disabled && (
                       <span className="ml-2 inline-flex items-center rounded-full bg-slate-900 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-white">
