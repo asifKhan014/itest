@@ -1,9 +1,9 @@
 {
-  "name": "itest",
+  "name": "rice-purity-test",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "description": "iTest - client-side purity checklist built with React + Vite",
+  "description": "Rice Purity Test - client-side purity checklist built with React + Vite",
   "engines": {
     "node": ">=20.19.0"
   },

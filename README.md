@@ -1,4 +1,4 @@
-# iTest
+# Rice Purity Test
 
 Client-side purity checklist inspired by the Rice Purity Test. Built with React + TypeScript + Vite and designed to deploy to any static host.
 

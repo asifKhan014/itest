@@ -112,13 +112,13 @@ const App: React.FC = () => {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 sm:px-6 lg:px-10">
         <header className="rounded-3xl bg-white/90 p-8 shadow-xl ring-1 ring-slate-200 backdrop-blur">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-600">
-            iTest · Purity checklist
+            Rice Purity Test · Purity checklist
           </p>
           <h1 className="mt-2 text-3xl font-semibold leading-tight sm:text-4xl">
             How pure is your score today?
           </h1>
           <p className="mt-3 max-w-3xl text-base leading-relaxed text-slate-600">
-            Welcome to iTest. Tap every item you have experienced, then hit Calculate to reveal your score. Everything stays private in your browser.
+            Welcome to the Rice Purity Test. Tap every item you have experienced, then hit Calculate to reveal your score. Everything stays private in your browser.
           </p>
         </header>
 
@@ -215,7 +215,7 @@ const App: React.FC = () => {
                 </button>
                 <a
                   href={smsHref}
-                  className="w-full rounded-full bg-amber-500 px-4 py-3 text-sm font-medium text-white shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 hover:shadow-xl sm:w-auto"
+                  className="w-full rounded-full bg-amber-500 px-4 py-3 text-sm font-medium text-white shadow-lg text-center shadow-amber-500/20 transition hover:-translate-y-0.5 hover:shadow-xl sm:w-auto"
                 >
                   Share via text
                 </a>
@@ -223,7 +223,7 @@ const App: React.FC = () => {
                   href={xHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full rounded-full bg-sky-600 px-4 py-3 text-sm font-medium text-white shadow-lg shadow-sky-600/20 transition hover:-translate-y-0.5 hover:shadow-xl sm:w-auto"
+                  className="w-full rounded-full bg-sky-600 px-4 py-3 text-sm font-medium text-center text-white shadow-lg shadow-sky-600/20 transition hover:-translate-y-0.5 hover:shadow-xl sm:w-auto"
                 >
                   Share on X
                 </a>
